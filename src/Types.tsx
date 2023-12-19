@@ -1,6 +1,6 @@
 
-import React from 'react';
-
+import React from 'react'
+import styles from './App.module.css'
 type MyComponentTypes = {
   myString: string;
   myNumber: number;
@@ -43,23 +43,21 @@ const MyComponent: React.FC = () => {
 
   PersonInfo(myPerson);
   return (
-    <>
-    
-      <h2> TypeScript</h2>
+<div className={styles.container}>
+      <h3 className={styles.title}>TypeScript</h3>
 
-      <h1>{myString}</h1>
-      <h1>Number: {myNumber}</h1>
-      <h1>Boolean: {myBoolean.toString()}</h1>
-      <h1>Array: {myArray.join()}</h1>
-      <h1>Array with number and String: {myArray1.join()}</h1>
-      <h1>Sum of Numbers: {addNumbers(10, 20)}</h1>
-      <h1>Person Information:</h1>
-      <h2>Name: {myPerson.name}</h2>
-      <h2>Age: {myPerson.age}</h2>
-
-
-   
-    </>
+      <h3>{myString}</h3>
+      <h3 className={styles.number}>Number: {myNumber}</h3>
+      <h3 className={styles.boolean}>Boolean: {myBoolean.toString()}</h3>
+      <h3 className={styles.array}>Array: {myArray.join()}</h3>
+      <h3 className={styles.array1}>Array with number and String: {myArray1.join()}</h3>
+      <h3>Sum of Numbers: {addNumbers(10, 20)}</h3>
+      <div className={styles.personInfo}>
+        <h1>Person Information:</h1>
+        <h3>Name: {myPerson.name}</h3>
+        <h3>Age: {myPerson.age}</h3>
+      </div>
+    </div>
   );
 };
 

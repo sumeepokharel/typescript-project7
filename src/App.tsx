@@ -1,9 +1,8 @@
-import MyComponent from "./Types";
-
+import MyComponent from "./Types"
 
 function App() {
   return (
-    <div><MyComponent/></div>
+    <div><MyComponent /></div>
   )
 }
 
